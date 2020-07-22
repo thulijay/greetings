@@ -1,49 +1,51 @@
 function greetFactory(greetX){
-  var greetName = greetX || {};
+    var greetName = greetX || {};
 
-  function userInput(userCheck, selectLang){
-    if(selectLang === 'English'){
-            return 'Hello, ' + userCheck + '!' + ' :)';
-          }
-          else if(selectLang === 'Latin'){
-            return 'Salve, '+ userCheck + '!'  + ' :)';
-          }
-          else if(selectLang === 'Dutch'){
-            return 'Hallo, ' + userCheck + '!' + ' :)';
-          }
+    function languageSelector(userCheck, selectLang){
+        if(selectLang === 'English'){
+            return 'Hello, ' + userCheck + '!' + ':)';
         }
-        function setNames(enterName){
-          if(enterName){
+        else if(selectLang === 'Latin'){
+            return 'Salve, ' + userCheck + '!' + ':)';
+        }
+        else if(selectLang === 'Dutch'){
+            return 'Hallo, ' + userCheck + '!' + ':)';
+        }
+    }
+
+    function namesX(enterName){
+        if(enterName){
             if(greetName[enterName] === undefined){
-              greetName[enterName] = 0;
+                greetName[enterName] = 0;
             }
-          }
         }
+    }
 
-        function errorHandler(greetingsX, solidGreet){
-          if(!greetingsX && !solidGreet){
-            return 'select a language and enter your name';
-          }
-          else if(!greetingsX){
-            return 'enter your name';
-          }else if(!solidGreet){
-            return 'select a language';
-          }
+    function alertUser(greetingsX, solidGreet){
+        if(!greetingsX && !solidGreet){
+            return 'Plese select a language & enter your name';
         }
+        else if(!greetingsX){
+            return 'Please enter your name';
+        }
+        else if(!solidGreet){
+            return 'Please select language';
+        }
+    }
 
-        function getNames(){
-          return greetName;
-        }
+    function displayName(){
+        return greetName;
+    }
 
-        function getCounter(){
-          return Object.keys(greetName).length;
-        }
+    function countNames(){
+        return Object.keys(greetName).length;
+    }
 
-        return {
-          userInput,
-          setNames,
-          getCounter,
-          getNames,
-          errorHandler
-        }
-      }
+    return {
+        languageSelector,
+        namesX,
+        alertUser,
+        displayName,
+        countNames
+}
+    }

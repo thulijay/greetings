@@ -26,19 +26,19 @@ function greetUser(){
   if(greetingsCheck && userCheck){
     var checkName = userCheck.charAt(0).toUpperCase() + userCheck.slice(1).toLowerCase();
 
-    greetMsg.innerHTML = langGreet.userInput(checkName, greetingsCheck);
-    langGreet.setNames(checkName);
-    localStorage['name'] = JSON.stringify(langGreet.getNames());
-    counterX.innerHTML = langGreet.getCounter();
+    greetMsg.innerHTML = langGreet.languageSelector(checkName, greetingsCheck);
+    langGreet.namesX(checkName);
+    localStorage['name'] = JSON.stringify(langGreet.displayName());
+    counterX.innerHTML = langGreet.countNames();
   }
   else{
-    greetMsg.innerHTML = langGreet.errorHandler(checkName, greetingsCheck);
+    greetMsg.innerHTML = langGreet.alertUser(checkName, greetingsCheck);
   }
 }
 
 greetBtn.addEventListener('click', greetUser);
 window.addEventListener('load', function(){
-  counterX.innerHTML = langGreet.getCounter();
+  counterX.innerHTML = langGreet.countNames();
 });
 
 function resetBtn(){
