@@ -23,13 +23,13 @@ function greetFactory(greetX){
 
     function alertUser(greetingsX, solidGreet){
         if(!greetingsX && !solidGreet){
-            return 'Plese select a language & enter your name';
+            return 'select a language & enter your name';
         }
         else if(!greetingsX){
-            return 'Please enter your name';
+            return 'enter your name';
         }
         else if(!solidGreet){
-            return 'Please select language';
+            return 'select language';
         }
     }
 
