@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="greet.css">
 
-  <title>Greet</title>
+  <title>Greetings</title>
 </head>
 <body>
-  <div class="six columns">
-    <h1>Greeting</h1>
-              <label class="">
-                <input type="radio" name="billItemType" class="greetRadio" value="English">
-                <span class="label-body">English</span>
-              </label>
 
-              <label class="">
-                <input type="radio" name="billItemType" class="greetRadio" value="Latin">
-                <span class="label-body">Latin</span>
-              </label>
+  <div class="">
+    <div class="top">
+      <h1>Greetings</h1>
+      </div>
 
-              <label class="">
-                <input type="radio" name="billItemType" class="greetRadio" value="Dutch">
-                <span class="label-body" >Dutch</span>
-              </label>
-            </div>
 
-            <div class="bottom">
-            <input type="text" name="" value="" placeholder="enter name " class="billTypeText">
-            <button class="button-primary langButton" type="button" name="langBtn" >Add</button>
-          </div>
 
+      <div class="">
+        <label class="">
+          <input type="radio" name="solidGreet" class="greetRadio" value="English">
+          <span class="">English</span>
+        </label>
+
+        <label class="">
+          <input type="radio" name="solidGreet" class="greetRadio" value="Latin">
+          <span class="">Latin</span>
+        </label>
+
+        <label class="">
+          <input type="radio" name="solidGreet" class="greetRadio" value="Dutch">
+          <span class="">Dutch</span>
+        </label>
+      </div>
+
+      <div class="bottom">
+        <input class="enterName" type="text" name="" value="" onfocus="this.value = ''">
+        <span class="greetCount">0</span>
+      </div>
+
+      <button class="button-primary langButton" type="button" name="langBtn" >Click Here</button>
+      <button class="restBtn" type="button" name="langBtn">Reset</button>
+
+      <div class="greetClass">
+      </div>
+    </div>
+
+
+  <script src="greet-factory.js"></script>
+  <script src="greet.js"></script>
 </body>
 </html>
